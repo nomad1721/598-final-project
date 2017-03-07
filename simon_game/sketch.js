@@ -1,9 +1,15 @@
+var page = 0; //call back to original page 
+var button;
+
 var displacement = 25;
 
 function setup() {
   createCanvas(800, 800);
   background(235);
   noStroke();
+  
+  button = createButton("Start Game");
+ // button.mousePressed(startSequence);
 }
 
 function draw() {
