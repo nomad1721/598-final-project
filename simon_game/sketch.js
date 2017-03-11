@@ -35,7 +35,7 @@ function squares() {
 
 
 function redSquare() {
-  if (mouseX >= width/2 && mouseY <= width/2 && mouseIsPressed) {
+  if (mouseX >= 425 && mouseX <= 775 && mouseY <= 375 && mouseY >= 25 && mouseIsPressed) {
     fill(255,128, 128);
   } else {
     fill(250, 0, 15);
@@ -44,7 +44,7 @@ function redSquare() {
 }
 
 function blueSquare() {
-  if(mouseX >= width/2 && mouseY >= width/2 && mouseIsPressed) {
+  if(mouseX >= 425 && mouseX <= 775 && mouseY >= 425 && mouseY <= 775 && mouseIsPressed) {
     fill(128, 179, 255);
   } else {
     fill(0, 100, 205);
@@ -53,7 +53,7 @@ function blueSquare() {
 }
 
 function yellowSquare() {
-  if(mouseX <= width/2 && mouseY >= width/2 && mouseIsPressed) {
+  if(mouseX <= 375 && mouseX >= 25 && mouseY >= 425 && mouseY <= 775 && mouseIsPressed) {
     fill(255, 230, 128);
   } else {
     fill(235, 190, 0);
@@ -62,7 +62,7 @@ function yellowSquare() {
 }
 
 function greenSquare() {
-  if(mouseX <= width/2 && mouseY <= width/2 && mouseIsPressed) {
+  if(mouseX <= 375 && mouseX >= 25 && mouseY <= 375 && mouseY >= 25 && mouseIsPressed) {
     fill(141, 211, 95);
   } else {
     fill(0, 200, 95);
