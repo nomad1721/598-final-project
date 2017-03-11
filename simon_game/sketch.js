@@ -1,26 +1,32 @@
 var page = 0; //call back to original page 
-var button;
+
 
 var displacement = 25;
 
 
 function setup() {
   createCanvas(800, 800);
+  //restartSequence();
   background(235);
   noStroke();
-  squares();
+  textSize(40);
+}  
 
-  
-  button = createButton("Start Game");
- // button.mousePressed(startSequence);
-
-}
 
 function draw() {
+ background(235); 
+ if (page == 0) {  // start game page
+      text('Click to Start', 250, height/2);
+  } else { // if page !0 then switches to game screen
+      squares();
+      if
+  }
   
 }
-
-
+// changes between animations ------------------------------
+function mousePressed() {
+  page = 1;
+}
 
 function squares() {
    redSquare();
@@ -30,11 +36,9 @@ function squares() {
 }
 
 
-
 function redSquare() {
   fill(250, 0, 15);
   rect(width/2 + displacement, displacement, 350, 350);
-  //if(mouseX > width/2 + displacement)
 }
 
 function blueSquare() {
