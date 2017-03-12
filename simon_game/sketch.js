@@ -1,6 +1,11 @@
+/* Name: Sam Kim & Josh Baker
+   Description: Final project. Simon memory skill game.
+   Last edited: 03/12/2017
+
+*/
 var page = 0; //call back to original page 
 var displacement = 25;
-
+var blinkSequence = [0, 1, 2, 3];
 
 function setup() {
   createCanvas(800, 800);
@@ -25,6 +30,8 @@ function mousePressed() {
   page = 1;
 }
 
+
+// draws colored squares of Simon game ----------------------------------
 function squares() {
    redSquare();
    blueSquare();
@@ -67,5 +74,41 @@ function greenSquare() {
   } else {
     fill(0, 200, 95);
   }
+  rect(displacement, displacement, 350, 350);
+}
+
+// read values in flashSequence array -----------------------------------
+for (var i = 0; i < 8; i++) {
+  blinkSequence[i] = i
+  if(i == 0) {
+    redBlink();
+  } else if (i == 1) {
+    blueBlink();
+  } else if (i == 2) {
+    yellowBlink();
+  } else if (i == 3) {
+    greenBlink();
+  }
+}
+
+
+// draws color "flash"---------------------------------------------------
+function redBlink() {
+  fill(255, 128, 128);
+  rect(width/2 + displacement, displacement, 350, 350);
+}
+
+function blueBlink() {
+  fill(128, 179, 255);
+  rect(width/2 + displacement, height/2 + displacement, 350, 350);
+}
+
+function yellowBlink() {
+  fill(255, 230, 128);
+  rect(displacement, height/2 + displacement, 350, 350);
+}
+
+function greenBlink() {
+  fill(141, 211, 95);
   rect(displacement, displacement, 350, 350);
 }
